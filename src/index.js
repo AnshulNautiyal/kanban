@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import "./scss/kanban.scss";
+import Kanban from './components';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Kanban />
   </React.StrictMode>,
   document.getElementById('root')
 );

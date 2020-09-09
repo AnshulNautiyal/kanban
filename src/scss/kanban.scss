@@ -1,0 +1,135 @@
+@import './variable.scss';
+@import './mixin.scss';
+@import './Modal.scss';
+@import './Form.scss';
+
+.header{
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    @include defaultFlex(row,space-between);
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $white;
+
+    &-name{ 
+
+    }
+    .profile {
+        cursor: pointer;
+        @include defaultFlex();
+        span {
+            margin-right: 5px;
+        }
+    }
+}
+.parentContainer{
+    overflow: auto;
+    padding-top: 90px;
+    background-color: $backgroundColor;
+    height: 100vh;
+    column-count: 3;
+    column-gap: 40px;
+    @include defaultFlex(row,center, flex-start);
+    .status {
+        width: 30%;
+        @include defaultFlex(column);
+        h2 {
+            margin-bottom: 20px;
+        }
+        .open {
+            color: $open;
+        }
+        .inprogress {
+            color: $progress;
+        }
+        .done {
+            color: $green;
+        }
+    }
+    .statusContainer {
+        // flex-grow: 1;
+        width: 400px;
+        border-radius: 10px;
+        background-color: $white;
+        min-height: 100px;
+        position: relative;
+        width: 100%;
+        @include defaultFlex(column);
+        padding: 20px;
+        .card {
+            position: relative;
+            width: 100%;
+            background: $cardbackground;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.1);
+            padding: 16px;
+            @include defaultFlex(column,center, flex-start);
+            font-weight: bold;
+            div{
+                span {
+                    font-weight: normal;
+                }
+            }
+            div:not(:last-of-type) {
+                margin-bottom: 5px;
+            }
+            &-assignee {
+                width: 100%;
+                @include defaultFlex(row,flex-end);
+                span {
+                    margin-right: 10px;
+                }
+            }
+
+            .editDelete {
+                
+                position: absolute;
+    top: 10px;
+    right: 16px;
+                height: 40px;
+                display: flex;
+                button {
+                    outline: none;
+                    cursor: pointer;
+                    width: 48px;
+                    height: 48px;
+                    border: none;
+                    color: white;
+                    border-radius: 100%;
+                    border: 4px solid $white;
+                    box-shadow: 0 1px 2px 0 rgba(32, 32, 32, 0.1);
+                }
+                button:first-of-type {
+                    background-color: $blue;
+                    margin-right: 10px;
+                }
+                button:last-of-type {
+                    background-color: $open;
+                }
+            }
+        }
+        .addTask{
+            .material-icons {
+                margin-right: 5px;
+                font-weight: bold;
+            }
+            font-weight: bold;
+            text-transform: uppercase;
+            @include defaultFlex();
+            width: 100%;
+            height: 45px;
+            background-color: $green;
+            box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            color:$white;
+            cursor: pointer;
+        }
+    }
+}
