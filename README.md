@@ -7,3 +7,7 @@ work-in-progress, and maximize efficiency (or flow).
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+### Tested in Mozilla and Chrome
+
+Note: If facing issue on date then try to enter manually.
+
